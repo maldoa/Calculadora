@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">App Calculadora</string>
+    <string name="buttonDigCero_Text">0</string>
+    <string name="buttonDigUno_Text">1</string>
+    <string name="buttonDigDos_Text">2</string>
+    <string name="buttonDigTres_Text">3</string>
+    <string name="buttonDigCuatro_Text">4</string>
+    <string name="buttonDigCinco_Text">5</string>
+    <string name="buttonDigSeis_Text">6</string>
+    <string name="buttonDigSiete_Text">7</string>
+    <string name="buttonDigOcho_Text">8</string>
+    <string name="buttonDigNueve_Text">9</string>
+
+    <string name="buttonDigPunto_Text">.</string>
+
+    <string name="buttonOpIgual_Text">=</string>
+    <string name="buttonOpSuma_Text">+</string>
+    <string name="buttonOpMenos_Text">-</string>
+    <string name="buttonOpMult_Text">*</string>
+    <string name="buttonOpDiv_Text">/</string>
+    <string name="buttonOpPorcentaje_Text">%</string>
+
+    <string name="buttonOpFactorial_Text">!</string>
+    <string name="buttonOpLog_Text">Log</string>
+    <string name="buttonOpLn_Text">Ln</string>
+    <string name="buttonOpAbs_Text">Abs</string>
+
+
+
+    <string name="buttonOpExp_Text">Pow</string>
+    <string name="buttonOpBorrar_Text">C</string>
+    <string name="buttonOpMasmenos_Text">+/-</string>
+
+    <string name="buttonOpSen_Text">Sen</string>
+    <string name="buttonOpCos_Text">Cos</string>
+    <string name="buttonOpTan_Text">Tan</string>
+    <string name="buttonOpCot_Text">Cot</string>
+    <string name="buttonOpCsc_Text">Csc</string>
+    <string name="buttonOpSec_Text">Sec</string>
+
+
+    <string name="buttonOpRaiz_Text">Sqrt</string>
+    <string name="buttonOpE_Text">e</string>
+    <string name="buttonOpPi_Text">\pi</string>
+    <string name="buttonOpPaIxq_Text">(</string>
+    <string name="buttonOpPaDer_Text">)</string>
+
+
+
+
+</resources>
