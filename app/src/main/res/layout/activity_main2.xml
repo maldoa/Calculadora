@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="mx.ipn.cic.calculadora.FragmentTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="mx.ipn.cic.calculadora.Bloque1Fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="mx.ipn.cic.calculadora.Bloque2Fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <fragment
+        android:id="@+id/fragment5"
+        android:name="mx.ipn.cic.calculadora.Bloque3Fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <fragment
+        android:id="@+id/fragment6"
+        android:name="mx.ipn.cic.calculadora.Bloque4Fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <fragment
+        android:id="@+id/fragment7"
+        android:name="mx.ipn.cic.calculadora.Bloque5Fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+</LinearLayout>

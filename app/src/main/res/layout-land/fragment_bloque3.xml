@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bloque1Fragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutFilaDos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/buttonOpLog"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/buttonOp_FondoAlterno"
+            android:onClick="onClick"
+            android:text="@string/buttonOpLog_Text"
+            android:textColor="@color/buttonOp_TextoAlterno"
+            android:textSize="24sp"
+            tools:ignore="ButtonStyle" />
+
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:background="@color/buttonOp_FondoAlterno"
+            android:onClick="onClick"
+            android:text="@string/buttonOpSen_Text"
+            android:textColor="@color/buttonOp_TextoAlterno"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:background="@color/buttonOp_FondoAlterno"
+            android:onClick="onClick"
+            android:text="@string/buttonOpCos_Text"
+            android:textColor="@color/buttonOp_TextoAlterno"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonDigCuatro"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/buttonDig_Fondo"
+            android:onClick="onClick"
+            android:text="@string/buttonDigCuatro_Text"
+            android:textColor="@color/buttonDig_Texto"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonDigCinco"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/buttonDig_Fondo"
+            android:onClick="onClick"
+            android:text="@string/buttonDigCinco_Text"
+            android:textColor="@color/buttonDig_Texto"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonDigSeis"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/buttonDig_Fondo"
+            android:onClick="onClick"
+            android:text="@string/buttonDigSeis_Text"
+            android:textColor="@color/buttonDig_Texto"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonOpMenos"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:onClick="onClick"
+            android:text="@string/buttonOpMenos_Text"
+            android:textColor="@color/buttonDig_Texto"
+            android:textSize="24sp"
+            android:textStyle="bold" />fragment_bloque3.xml
+    </LinearLayout>
+
+</FrameLayout>
