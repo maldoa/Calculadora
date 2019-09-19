@@ -5,7 +5,8 @@ import java.lang.Math;
 
 class Evaluador {
     public static void main(String[] args) {
-        String[] strArr = args[0].split(" ");
+	String ejemplo = "1.87 3.654 + 4 * Sen";
+        String[] strArr = ejemplo.split(" ");
 
         System.out.println(calculator(strArr));
     }
