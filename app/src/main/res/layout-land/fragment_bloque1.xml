@@ -51,6 +51,7 @@
             android:layout_weight="1"
             android:background="@color/buttonOp_FondoAlterno"
             android:text="@string/buttonOpBorrar_Text"
+            android:onClick="onClick"
             android:textColor="@color/buttonOp_TextoAlterno"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -62,6 +63,7 @@
             android:layout_weight="1"
             android:background="@color/buttonOp_FondoAlterno"
             android:text="@string/buttonOpMasmenos_Text"
+            android:onClick="onClick"
             android:textColor="@color/buttonOp_TextoAlterno"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -74,6 +76,7 @@
             android:layout_weight="1"
             android:background="@color/colorPrimary"
             android:text="@string/buttonOpExp_Text"
+            android:onClick="onClick"
             android:textColor="@color/buttonDig_Texto"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -86,6 +89,7 @@
             android:layout_weight="1"
             android:background="@color/colorPrimary"
             android:text="@string/buttonOpDiv_Text"
+            android:onClick="onClick"
             android:textColor="@color/buttonDig_Texto"
             android:textSize="24sp"
             android:textStyle="bold" />

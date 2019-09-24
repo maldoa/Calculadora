@@ -11,5 +11,16 @@
         android:layout_height="match_parent"
         android:orientation="horizontal" >
 
+        <TextView
+            android:id="@+id/textoCalculadora"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:ellipsize="none"
+            android:gravity="center|right"
+            android:scrollbars="horizontal"
+            android:singleLine="true"
+            android:textSize="44sp" />
+
     </LinearLayout>
 </FrameLayout>

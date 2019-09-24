@@ -20,6 +20,7 @@
             android:text="@string/buttonOpBorrar_Text"
             android:textColor="@color/buttonOp_TextoAlterno"
             android:textSize="24sp"
+            android:onClick="onClick"
             android:textStyle="bold" />
 
         <Button
@@ -31,6 +32,7 @@
             android:text="@string/buttonOpMasmenos_Text"
             android:textColor="@color/buttonOp_TextoAlterno"
             android:textSize="24sp"
+            android:onClick="onClick"
             android:textStyle="bold" />
 
         <Button
@@ -43,6 +45,7 @@
             android:text="@string/buttonOpExp_Text"
             android:textColor="@color/buttonDig_Texto"
             android:textSize="24sp"
+            android:onClick="onClick"
             android:textStyle="bold" />
 
         <Button
@@ -55,6 +58,7 @@
             android:text="@string/buttonOpDiv_Text"
             android:textColor="@color/buttonDig_Texto"
             android:textSize="24sp"
+            android:onClick="onClick"
             android:textStyle="bold" />
     </LinearLayout>
 

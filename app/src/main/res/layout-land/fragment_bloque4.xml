@@ -69,6 +69,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/buttonDigDos_Text"
+            android:onClick="onClick"
             android:textColor="@color/buttonDig_Texto"
             android:textSize="24sp"
             android:textStyle="bold"

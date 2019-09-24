@@ -26,8 +26,7 @@
     <string name="buttonOpAbs_Text">Abs</string>
 
 
-
-    <string name="buttonOpExp_Text">Pow</string>
+    <string name="buttonOpExp_Text">^</string>
     <string name="buttonOpBorrar_Text">C</string>
     <string name="buttonOpMasmenos_Text">+/-</string>
 
@@ -40,12 +39,13 @@
 
 
     <string name="buttonOpRaiz_Text">Sqrt</string>
-    <string name="buttonOpE_Text">e</string>
-    <string name="buttonOpPi_Text">\pi</string>
+    <string name="buttonOpE_Text"><i>e</i></string>
+    <string name="buttonOpPi_Text">\u03C0</string>
     <string name="buttonOpPaIxq_Text">(</string>
     <string name="buttonOpPaDer_Text">)</string>
 
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
