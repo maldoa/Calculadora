@@ -16,9 +16,8 @@ public class Convertidor {
 
     public String transforma() {
         while(str.hasMoreTokens()){
-            String ch = str.nextToken();
-            System.out.println(ch);
-            switch(ch) {
+            String token = str.nextToken();
+            switch(token) {
                 case "+":
                 case "-":
                 case "*":
@@ -31,19 +30,19 @@ public class Convertidor {
                 case "Csc":
                 case "Cot":
                 case "Ln":
-                    oper(ch, 1);
+                    operadoresPila(token, 0);
                     break;
                 case "(":
-                    stack.push(ch);
+                    stack.push(token);
                     break;
                 case ")":
-                    paren(ch);
+                    parentesisIzquiero(token);
                     break;
                 case ".":
-                    salida = salida + ch;
+                    salida = salida + token;
                     break;
                 default:
-                    salida = salida + " " + ch;
+                    salida = salida + " " + token;
                     break;
             }
         }
@@ -52,92 +51,76 @@ public class Convertidor {
             salida = salida + " " +stack.pop();
         }
 
-        System.out.println(salida);
         return salida;
     }
-    public void oper(String opEsto, int prec1){
+    public void operadoresPila(String operadorActual, int prioridad1){
         while(!stack.empty()) {
-            String opTop = (String) stack.pop();
-            if(opTop.equals("(")){
-                stack.push(opTop);
+            String operadorTop = (String) stack.pop();
+            if(operadorTop.equals("(")){
+                stack.push(operadorTop);
                 break;
             }else{
-                int prec2;
-                if(opTop == "+" || opTop == "-" || opTop == "*"|| opTop == "/")
-                    prec2 = 1;
+                int prioridad2;
+                if(operadorTop == "+" || operadorTop == "-" || operadorTop == "*"|| operadorTop == "/")
+                    prioridad2 = 0;
                 else
-                    prec2 = 2;
-                if(prec2 < prec1) {
-                    stack.push(opTop);
+                    prioridad2 = 1;
+                if(prioridad2 < prioridad1) {
+                    stack.push(operadorTop);
                     break;
                 }else
-                    salida = salida + " " + opTop;
+                    salida = salida + " " + operadorTop;
             }
         }
-        stack.push(opEsto);
+        stack.push(operadorActual);
     }
 
-    public void paren(String ch){
+    public void parentesisIzquiero(String token){
         while (!stack.empty()) {
-            String chx = (String) stack.pop();
-            if (chx.equals("("))
+            String operador = (String) stack.pop();
+            if (operador.equals("("))
                 break;
             else
-                salida = salida + " " + chx;
+                salida = salida + " " + operador;
         }
     }
 
-/*    public static void main(String[] args) {
-        Scanner leer = new Scanner(System.in);
-        System.out.println("Ingresa una expresion infija");
-        String entrada = leer.nextLine();
-        String salida;
-        Convertidor exp = new Convertidor(entrada);
-        salida = exp.transforma();
-        System.out.println("Posfijo es " + salida);
-        String ejemplo = "1.87 3.654 + 4 * Sen";
-        String[] strArr = salida.split(" ");
-
-        System.out.println(calculator(strArr));
-    }*/
-
-    public  double calculator(String[] strArr) {
-        Stack<Double> operands = new Stack<Double>();
-
-        for(String str : strArr) {
-            if (str.trim().equals("")) {
+    public  double calculator(String[] cadena) {
+        Stack<Double> operandos = new Stack<Double>();
+        for(String expresion : cadena) {
+            if (expresion.trim().equals("")) {
                 continue;
             }
-
-            switch (str) {
+            double valor = 0;
+            switch (expresion) {
                 case "+":
                 case "-":
                 case "*":
                 case "/":
                 case "^":
-                    double right = operands.pop();
-                    double left = operands.pop();
-                    double value = 0;
-                    switch(str) {
+                    double derecha = operandos.pop();
+                    double  izquierda = operandos.pop();
+
+                    switch(expresion) {
                         case "+":
-                            value = left + right;
+                            valor = izquierda + derecha;
                             break;
                         case "-":
-                            value = left - right;
+                            valor = izquierda - derecha;
                             break;
                         case "*":
-                            value = left * right;
+                            valor = izquierda * derecha;
                             break;
                         case "/":
-                            value = left / right;
+                            valor = izquierda / derecha;
                             break;
                         case "^":
-                            value = Math.pow(left, right);
+                            valor = Math.pow(izquierda, derecha);
                             break;
                         default:
                             break;
                     }
-                    operands.push(value);
+                    operandos.push(valor);
                     break;
                 case "Sen":
                 case "Cos":
@@ -146,42 +129,41 @@ public class Convertidor {
                 case "Csc":
                 case "Cot":
                 case "Ln":
-                    right = operands.pop();
-                    value = 0;
-                    switch(str) {
+                    derecha = operandos.pop();
+                    switch(expresion) {
 
                         case "Sen":
-                            value = Math.sin(right);
+                            valor = Math.sin(derecha);
                             break;
                         case "Cos":
-                            value = Math.cos(right);
+                            valor = Math.cos(derecha);
                             break;
                         case "Tan":
-                            value = Math.tan(right);
+                            valor = Math.tan(derecha);
                             break;
                         case "Cot":
-                            value = 1/ Math.tan(right);
+                            valor = 1/ Math.tan(derecha);
                             break;
                         case "Csc":
-                            value = 1/ Math.sin(right);
+                            valor = 1/ Math.sin(derecha);
                             break;
                         case "Sec":
-                            value = 1 / Math.cos(right);
+                            valor = 1 / Math.cos(derecha);
                             break;
                         case "Ln":
-                            value = Math.log(right);
+                            valor = Math.log(derecha);
                             break;
                         default:
                             break;
                     }
-                    operands.push(value);
+                    operandos.push(valor);
                     break;
 
                 default:
-                    operands.push(Double.parseDouble(str));
+                    operandos.push(Double.parseDouble(expresion));
                     break;
             }
         }
-        return operands.pop();
+        return operandos.pop();
     }
 }
